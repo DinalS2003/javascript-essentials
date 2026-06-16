@@ -1,47 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About Us</title>
-<link rel="stylesheet" href="travel_recommendation.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelBloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="travel_recommendation.css">
 </head>
 <body>
 
-<nav>
-<ul>
-<li><a href="travel_recommendation.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <i class="fas fa-plane"></i>
+            <span>TravelBloom</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="travel_recommendation.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="search-container">
+            <input type="text" placeholder="Enter a destination or keyword" class="search-input" style="cursor: default;" disabled>
+        </div>
+    </div>
 </nav>
 
 <div class="page">
+    <h1>About TravelBloom</h1>
+    <p>
+        At TravelBloom, we believe that travel has the power to transform lives. We're dedicated to helping adventurers, explorers, and dreamers discover the most incredible destinations across our beautiful planet. From stunning beaches to ancient temples, bustling cities to serene countryside, we curate the best travel experiences for you.
+    </p>
 
-<h1>About Us</h1>
+    <h2>Our Mission</h2>
+    <p>
+        Our mission is to inspire and empower travelers to explore the world with confidence. We provide comprehensive travel recommendations, insider tips, and curated guides to help you plan the perfect journey, whether you're seeking relaxation, adventure, or cultural immersion.
+    </p>
 
-<p>
-Travel Explorer helps travelers discover the best destinations around the world.
-</p>
+    <h2>Our Team</h2>
+    <div class="team">
+        <div class="team-member">
+            <i class="fas fa-user-circle" style="font-size: 150px; color: #00d4ff;"></i>
+            <h3>John Smith</h3>
+            <p>Project Manager</p>
+        </div>
 
-<h2>Our Team</h2>
+        <div class="team-member">
+            <i class="fas fa-user-circle" style="font-size: 150px; color: #00d4ff;"></i>
+            <h3>Sarah Lee</h3>
+            <p>Travel Consultant</p>
+        </div>
 
-<div class="team">
-<div class="card">
-<h3>John Smith</h3>
-<p>Project Manager</p>
+        <div class="team-member">
+            <i class="fas fa-user-circle" style="font-size: 150px; color: #00d4ff;"></i>
+            <h3>David Brown</h3>
+            <p>Web Developer</p>
+        </div>
+    </div>
 </div>
 
-<div class="card">
-<h3>Sarah Lee</h3>
-<p>Travel Consultant</p>
-</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>TravelBloom</h3>
+            <p>Your gateway to unforgettable journeys around the world.</p>
+        </div>
 
-<div class="card">
-<h3>David Brown</h3>
-<p>Web Developer</p>
-</div>
-</div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="travel_recommendation.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
-</div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TravelBloom. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>

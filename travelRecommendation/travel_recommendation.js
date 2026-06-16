@@ -6,21 +6,24 @@ const results = document.getElementById("results");
 let travelData = {};
 
 fetch("travel_recommendation_api.json")
-.then(response => response.json())
-.then(data => {
-    travelData = data;
-    console.log(data);
-});
+    .then(response => response.json())
+    .then(data => {
+        travelData = data;
+        displayAllDestinations();
+    });
 
 function displayItems(items) {
-
     results.innerHTML = "";
 
-    items.forEach(item => {
+    if (!items || items.length === 0) {
+        results.innerHTML = "<h2>No recommendations found</h2>";
+        return;
+    }
 
+    items.forEach(item => {
         results.innerHTML += `
         <div class="card">
-            <img src="${item.imageUrl}" alt="${item.name}">
+            <img src="${item.imageUrl}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/300x250?text=${item.name}'">
             <h3>${item.name}</h3>
             <p>${item.description}</p>
         </div>
@@ -28,27 +31,36 @@ function displayItems(items) {
     });
 }
 
-searchBtn.addEventListener("click", () => {
+function displayAllDestinations() {
+    results.innerHTML = "";
+    let allItems = [
+        ...(travelData.beaches || []),
+        ...(travelData.temples || []),
+        ...(travelData.countries || [])
+    ];
+    displayItems(allItems);
+}
 
+searchBtn.addEventListener("click", () => {
     let keyword = searchInput.value.toLowerCase();
 
-    if(keyword.includes("beach")){
+    if (keyword.trim() === "") {
+        displayAllDestinations();
+        return;
+    }
+
+    if (keyword.includes("beach")) {
         displayItems(travelData.beaches);
-    }
-    else if(keyword.includes("temple")){
+    } else if (keyword.includes("temple")) {
         displayItems(travelData.temples);
-    }
-    else if(keyword.includes("country")){
+    } else if (keyword.includes("country")) {
         displayItems(travelData.countries);
-    }
-    else{
-        results.innerHTML =
-        "<h2>No recommendations found</h2>";
+    } else {
+        results.innerHTML = "<h2>No recommendations found</h2>";
     }
 });
 
 clearBtn.addEventListener("click", () => {
-
     searchInput.value = "";
-    results.innerHTML = "";
+    displayAllDestinations();
 });
