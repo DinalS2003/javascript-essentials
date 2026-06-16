@@ -1,0 +1,47 @@
+{
+  "conditions": [
+    {
+      "name": "Diabetes",
+      "symptoms": [
+        "Frequent urination",
+        "Increased thirst",
+        "Fatigue"
+      ],
+      "prevention": [
+        "Healthy diet",
+        "Exercise",
+        "Weight management"
+      ],
+      "treatment": "Insulin therapy",
+      "imagesrc": "https://via.placeholder.com/200x100?text=Diabetes"
+    },
+    {
+      "name": "Thyroid",
+      "symptoms": [
+        "Weight gain",
+        "Fatigue",
+        "Hair loss"
+      ],
+      "prevention": [
+        "Balanced diet",
+        "Regular checkups"
+      ],
+      "treatment": "Hormone replacement",
+      "imagesrc": "https://via.placeholder.com/200x100?text=Thyroid"
+    },
+    {
+      "name": "High Blood Pressure",
+      "symptoms": [
+        "Headaches",
+        "Dizziness"
+      ],
+      "prevention": [
+        "Reduce salt",
+        "Exercise",
+        "Stress management"
+      ],
+      "treatment": "Medication",
+      "imagesrc": "https://via.placeholder.com/200x100?text=Blood+Pressure"
+    }
+  ]
+}
